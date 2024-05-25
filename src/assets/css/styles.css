@@ -9,6 +9,7 @@ html {
 body {
     font-size: 1.6rem;
     font-family: "Poppins", sans-serif;
+    background: #fffaf5;
 }
 
 /* Common */
@@ -55,7 +56,7 @@ button {
 }
 
 .btn:hover {
-    opacity: 0.9;
+    text-shadow: 1px 0 0 currentColor;
 }
 
 /* Header */
@@ -95,7 +96,8 @@ button {
     color: #5e6085;
 }
 
-.navbar__link:hover {
+.navbar__link:hover,
+.header-action__link:hover {
     text-shadow: 1px 0 0 currentColor;
     color: #000958;
 }
@@ -104,4 +106,65 @@ button {
     --height: 50px;
 
     min-width: 118px;
+}
+
+/* Hero */
+.hero {
+    margin-top: 74px;
+}
+
+.hero__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero__media {
+    display: flex;
+}
+
+.hero__img-wrap {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 388px;
+    height: 488px;
+    border-radius: 16px;
+    background: #fe997b;
+    border: 3px solid #fff;
+}
+
+.hero__img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: inherit;
+}
+
+.hero__decor {
+    position: absolute;
+    z-index: -1;
+}
+
+.hero__decor-left {
+    left: -58px;
+    bottom: 10px;
+}
+
+.hero__decor-right {
+    top: 16px;
+    right: -42px;
+}
+
+.hero__img-wrap-small {
+    align-self: flex-end;
+    width: 186px;
+    height: 244px;
+    border-radius: 16px;
+    background: #faa7ad;
+    border: 2px solid #fcdee0;
+    margin: 0 0 -58px -24px;
+}
+
+.hero__img-small {
 }
