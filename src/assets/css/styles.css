@@ -617,11 +617,12 @@ button {
 .service__body {
     display: grid;
     grid-template-columns: auto 1fr auto;
+    column-gap: 70px;
     margin-top: 70px;
 }
 
 .service-item {
-    padding: 30px 28px;
+    padding: 30px 22px 30px 28px;
     width: 294px;
     background: #fff;
     border: 2px solid rgba(255, 188, 122, 0.26);
@@ -669,4 +670,46 @@ button {
 .service-item__more::after {
     content: url(../icons/arrow-up-right.svg);
     margin: 1px 0 0 6px;
+}
+
+.service__media {
+    position: relative;
+    margin-top: 18px;
+}
+
+.service__media::after {
+    position: absolute;
+    content: "";
+    height: 350px;
+    left: 15px;
+    right: 15px;
+    bottom: 0;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #9df1fb 0%, #73d0db 108.14%);
+}
+
+.service__img {
+    position: relative;
+    width: 100%;
+    display: block;
+    z-index: 1;
+}
+
+.service__cta-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+.service__cta {
+    min-width: 214px;
+    color: #ff5b2e;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-color: currentColor;
+}
+
+.service__cta:hover {
+    opacity: 0.6;
+    box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
 }
