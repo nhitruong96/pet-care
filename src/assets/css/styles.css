@@ -67,9 +67,9 @@ button {
 }
 
 .btn--primary {
-    color: #fff;
-    background: var(--primary-color);
-    border-color: var(--primary-color);
+    color: #fff !important;
+    background: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
 }
 
 .btn__icon {
@@ -854,6 +854,10 @@ button {
     background: #fff6ed;
 }
 
+.pricing__container {
+    width: 994px;
+}
+
 .pricing__heading,
 .pricing__desc {
     text-align: center;
@@ -931,4 +935,78 @@ button {
     position: absolute;
     top: -10px;
     right: -110px;
+}
+
+.pricing__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 44px;
+    /* margin: 56px 88px 0; */
+    margin-top: 56px;
+}
+
+.pricing-item {
+    padding: 30px 28px;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.pricing-item__type {
+    font-size: 1.2rem;
+    line-height: 1;
+    color: #ff5b2e;
+}
+
+.pricing-item__heading {
+    margin-top: 8px;
+    font-size: 1.8rem;
+    line-height: 1;
+    color: #3f4065;
+}
+
+.pricing-item__price {
+    margin-top: 24px;
+    font-family: Sora, sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.03;
+    color: #000958;
+}
+
+.pricing-item__btn {
+    --height: 44px;
+
+    margin-top: 22px;
+    min-width: 100%;
+    border-color: rgba(255, 91, 46, 0.6);
+    background: transparent;
+    color: #ff5b2e;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.pricing-item__list {
+    margin-top: 24px;
+}
+
+.pricing-item__item {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: #656689;
+}
+
+.pricing-item__item::before {
+    content: url(../icons/price-check.svg);
+    margin-right: 14px;
+}
+
+.pricing-item:nth-of-type(1) .pricing-item__item:nth-of-type(5)::before,
+.pricing-item:nth-of-type(1) .pricing-item__item:nth-of-type(6)::before,
+.pricing-item:nth-of-type(1) .pricing-item__item:nth-of-type(7)::before,
+.pricing-item:nth-of-type(2) .pricing-item__item:nth-of-type(6)::before,
+.pricing-item:nth-of-type(2) .pricing-item__item:nth-of-type(7)::before {
+    opacity: 0.4;
 }
