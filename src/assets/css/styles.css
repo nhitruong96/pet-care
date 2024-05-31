@@ -207,7 +207,6 @@ button {
     width: 186px;
     height: 244px;
     border: 2px solid #fcdee0;
-    border-radius: 16px;
     background: #faa7ad;
     margin: 0 0 -58px -24px;
 }
@@ -701,11 +700,10 @@ button {
     color: #ff5b2e;
     font-size: 1.6rem;
     font-weight: 500;
-    border-color: currentColor;
+    border-color: rgb(255 91 46 / 60%);
 }
 
 .service__cta:hover {
-    opacity: 0.6;
     box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
 }
 
@@ -832,11 +830,10 @@ button {
     color: #ff5b2e;
     font-size: 1.6rem;
     font-weight: 500;
-    border-color: currentColor;
+    border-color: rgb(255 91 46 / 60%);
 }
 
 .staff__cta:hover {
-    opacity: 0.6;
     box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
 }
 
@@ -973,7 +970,7 @@ button {
     --height: 44px;
 
     margin-top: 22px;
-    min-width: 100%;
+    width: 100%;
     border-color: rgba(255, 91, 46, 0.6);
     background: transparent;
     color: #ff5b2e;
@@ -1140,4 +1137,37 @@ button {
     width: 24px;
     background: #ff5b2e;
     cursor: auto;
+}
+
+/* Blog */
+.blog {
+    padding: 78px 0 131px;
+}
+
+.blog__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog__info {
+    width: 350px;
+    margin-right: 74px;
+}
+
+.blog__desc {
+    margin-top: 0;
+}
+
+.blog__cta {
+    margin-top: 24px;
+    min-width: 182px;
+    border-color: rgb(255 91 46 / 60%);
+    color: #ff5b2e;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.blog__cta:hover {
+    box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
 }
