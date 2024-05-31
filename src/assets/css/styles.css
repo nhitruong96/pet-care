@@ -53,8 +53,8 @@ button {
     min-width: 130px;
     height: var(--height);
     line-height: var(--height);
-    border-radius: 99px;
     border: 1px solid rgba(0, 9, 88, 0.7);
+    border-radius: 99px;
     font-size: 1.4rem;
     font-weight: 600;
     text-align: center;
@@ -81,7 +81,7 @@ button {
     height: 20px;
     border-radius: 50%;
     background: #fff;
-    box-shadow: 4px 3px 10px -1px rgba(191, 41, 0, 0, 0.4);
+    box-shadow: 4px 3px 10px -1px rgba(191, 41, 0, 0.4);
 }
 
 .section-heading {
@@ -176,8 +176,8 @@ button {
     justify-content: center;
     width: 388px;
     height: 488px;
-    border-radius: 16px;
     background: #fe997b;
+    border-radius: 16px;
     border: 3px solid #fff;
 }
 
@@ -206,16 +206,16 @@ button {
     align-self: flex-end;
     width: 186px;
     height: 244px;
+    border: 2px solid #fcdee0;
     border-radius: 16px;
     background: #faa7ad;
-    border: 2px solid #fcdee0;
     margin: 0 0 -58px -24px;
 }
 
 .hero__list {
     position: absolute;
     left: 129px;
-    bottom: 0px;
+    bottom: 0;
     padding: 18px 14px;
     width: 250px;
     height: 156px;
@@ -244,7 +244,6 @@ button {
 .hero-list-item__title {
     font-family: Sora, sans-serif;
     font-size: 1.4rem;
-    font-weight: 600;
     line-height: 1;
     color: #181e52;
 }
@@ -330,7 +329,6 @@ button {
 .about__label {
     font-family: Sora, sans-serif;
     font-size: 1.6rem;
-    font-weight: 600;
     line-height: 1;
     color: #5e6085;
 }
@@ -396,7 +394,7 @@ button {
 }
 
 .about__card-title {
-    font-family: Sora;
+    font-family: Sora, sans-serif;
     font-size: 4.2rem;
     font-weight: 700;
     line-height: 1;
@@ -410,7 +408,7 @@ button {
     color: #c6f4f9;
 }
 
-.about_card-decor {
+.about__card-decor {
     position: absolute;
     top: -40px;
     right: -32px;
@@ -428,7 +426,6 @@ button {
     z-index: -1;
     content: "";
     height: 336px;
-    display: inline-block;
     border-radius: 16px;
     background: linear-gradient(180deg, #fce0ef 0%, #fac3d1 100%);
 }
@@ -553,7 +550,6 @@ button {
 .tab__title {
     font-family: Sora, sans-serif;
     font-size: 1.8rem;
-    font-weight: 600;
     line-height: 1;
     color: #48496a;
 }
@@ -580,7 +576,7 @@ button {
 .tab__content-more {
     position: relative;
     display: inline-block;
-    padding-top: 32px;
+    margin-top: 32px;
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 1;
@@ -590,7 +586,6 @@ button {
 .tab__content-more::after {
     bottom: -5px;
     height: 1.5px;
-    background: #ff5d31;
     opacity: 1;
 }
 
@@ -609,7 +604,6 @@ button {
     margin-bottom: 15px;
     font-family: Sora, sans-serif;
     font-size: 1.6rem;
-    font-weight: 600;
     line-height: 1;
     color: #5e6085;
 }
@@ -644,9 +638,8 @@ button {
 .service-item__heading::before {
     position: absolute;
     inset: 0 auto 0 0;
-    content: " ";
+    content: "";
     display: inline-block;
-    margin-right: 12px;
     width: 2px;
     border-radius: 1px;
     background: linear-gradient(90deg, #ff5b2e 0.39%, #ffa187 100.29%);
@@ -730,7 +723,6 @@ button {
     margin-bottom: 15px;
     font-family: Sora, sans-serif;
     font-size: 1.6rem;
-    font-weight: 600;
     line-height: 1;
     color: #5e6085;
 }
@@ -748,7 +740,7 @@ button {
 .staff-item__img-wrap {
     position: relative;
     margin: 0 16px;
-    border-radius: 129.5px;
+    border-radius: 130px;
 }
 
 .staff-item__img-wrap::before {
@@ -883,7 +875,7 @@ button {
     padding: 0 40px;
     width: 276px;
     height: 56px;
-    border-radius: 31px;
+    border-radius: 99px;
     border: 1px solid #ff5b2e99;
     user-select: none;
     cursor: pointer;
@@ -971,7 +963,7 @@ button {
 .pricing-item__price {
     margin-top: 24px;
     font-family: Sora, sans-serif;
-    font-size: 34px;
+    font-size: 3.4rem;
     font-weight: 700;
     line-height: 1.03;
     color: #000958;
@@ -1017,7 +1009,7 @@ button {
 
 /* Review */
 .review {
-    padding: 32px 0;
+    padding: 104px 0 52px;
 }
 
 .review__inner {
@@ -1046,13 +1038,28 @@ button {
     border-color: #ff5b2e;
 }
 
+.review__control:nth-of-type(2) {
+    margin-left: auto;
+}
+
+.review__content {
+    overflow: hidden;
+}
+
+.review__list {
+    display: flex;
+}
+
 .review-item {
     display: flex;
     align-items: center;
     column-gap: 115px;
+    flex-shrink: 0;
+    width: 100%;
 }
 
 .review-item__media {
+    margin-top: -52px;
     position: relative;
     flex-shrink: 0;
     width: 274px;
@@ -1062,7 +1069,6 @@ button {
 .review-item__media::after {
     position: absolute;
     content: "";
-    width: 100%;
     height: 82%;
     inset: auto 0 0 0;
     background: #ffda54;
@@ -1075,6 +1081,10 @@ button {
     display: block;
     width: 100%;
     border-radius: inherit;
+}
+
+.review-item__content {
+    margin-top: 28px;
 }
 
 .review-item__quote {
@@ -1131,4 +1141,3 @@ button {
     background: #ff5b2e;
     cursor: auto;
 }
-
