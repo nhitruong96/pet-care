@@ -98,6 +98,20 @@ button {
     color: #656689;
 }
 
+.line-clamp-heading {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 2);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 3);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 /* Header */
 .header {
     padding: 26px 0;
@@ -117,9 +131,10 @@ button {
 
 .logo__brand {
     font-family: Sora, sans-serif;
-    color: #000958;
     font-size: 2.5rem;
     font-weight: 700;
+    line-height: 1;
+    color: #000958;
 }
 
 .navbar__list {
@@ -243,6 +258,7 @@ button {
 .hero-list-item__title {
     font-family: Sora, sans-serif;
     font-size: 1.4rem;
+    font-weight: 600;
     line-height: 1;
     color: #181e52;
 }
@@ -328,6 +344,7 @@ button {
 .about__label {
     font-family: Sora, sans-serif;
     font-size: 1.6rem;
+    font-weight: 600;
     line-height: 1;
     color: #5e6085;
 }
@@ -549,6 +566,7 @@ button {
 .tab__title {
     font-family: Sora, sans-serif;
     font-size: 1.8rem;
+    font-weight: 600;
     line-height: 1;
     color: #48496a;
 }
@@ -603,6 +621,7 @@ button {
     margin-bottom: 15px;
     font-family: Sora, sans-serif;
     font-size: 1.6rem;
+    font-weight: 600;
     line-height: 1;
     color: #5e6085;
 }
@@ -630,6 +649,7 @@ button {
     position: relative;
     padding-left: 12px;
     font-size: 2.2rem;
+    font-weight: 600;
     line-height: 1;
     color: #000958;
 }
@@ -657,6 +677,7 @@ button {
     margin-top: 24px;
     font-family: Sora, sans-serif;
     font-size: 1.2rem;
+    font-weight: 600;
     line-height: 1;
     color: #34396a;
 }
@@ -721,6 +742,7 @@ button {
     margin-bottom: 15px;
     font-family: Sora, sans-serif;
     font-size: 1.6rem;
+    font-weight: 600;
     line-height: 1;
     color: #5e6085;
 }
@@ -815,6 +837,7 @@ button {
 .staff-item__name {
     margin-top: 14px;
     font-size: 2.2rem;
+    font-weight: 600;
     line-height: 1;
     color: #000958;
 }
@@ -953,6 +976,7 @@ button {
 .pricing-item__heading {
     margin-top: 8px;
     font-size: 1.8rem;
+    font-weight: 600;
     line-height: 1;
     color: #3f4065;
 }
@@ -1098,6 +1122,7 @@ button {
     margin-top: 34px;
     font-family: Sora, sans-serif;
     font-size: 1.8rem;
+    font-weight: 600;
     line-height: 1;
     color: #282828;
 }
@@ -1141,7 +1166,7 @@ button {
 
 /* Blog */
 .blog {
-    padding: 78px 0 131px;
+    padding: 78px 0;
 }
 
 .blog__top {
@@ -1170,4 +1195,148 @@ button {
 
 .blog__cta:hover {
     box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
+}
+
+.blog__list {
+    margin-top: 54px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 48px;
+}
+
+.blog-item__img-wrap {
+    padding: 24px 0 0 36px;
+    border-radius: 24px;
+    background: #90ccff;
+}
+
+.blog-item:nth-child(2) .blog-item__img-wrap {
+    background: #ff997e;
+}
+
+.blog-item:nth-child(3) .blog-item__img-wrap {
+    background: #5bd6e2;
+}
+
+.blog-item__img {
+    display: block;
+    margin-top: 25px;
+    width: 100%;
+    height: 296px;
+    object-fit: cover;
+}
+
+.blog-item__time {
+    font-family: Sora, sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.21;
+    color: #fff;
+}
+
+.blog-item__info {
+    padding: 28px 14px 0 0;
+}
+
+.blog-item__title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.55;
+    color: #000958;
+}
+
+.blog-item__desc {
+    margin-top: 16px;
+    font-size: 1.4rem;
+    line-height: 1.71;
+    color: #656689;
+}
+
+/* Footer */
+.footer {
+    margin-top: 53px;
+    background: #fff6ed;
+}
+
+.footer__inner {
+    display: flex;
+}
+
+.footer__left {
+    padding: 114px 0 148px;
+}
+
+.subscribe-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 35px 0 68px;
+    width: 268px;
+    height: 46px;
+    border-radius: 99px;
+    border: 1px solid rgba(255, 91, 46, 0.25);
+    background: #fff;
+    font-size: 1.4rem;
+}
+
+.subscribe-form__input {
+    width: 100%;
+    height: 100%;
+    padding: 0 22px;
+    border: none;
+    outline: none;
+    border-radius: inherit;
+}
+
+.subscribe-form__input::placeholder {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.17;
+    color: #656689;
+    opacity: 0.8;
+}
+
+.subscribe-form__submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    margin-right: -1px;
+    border-radius: 50%;
+    background: #ff5b2e;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.subscribe-form__submit:hover {
+    opacity: 0.9;
+}
+
+.footer__heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.11;
+    color: #000958;
+}
+
+.social-list {
+    display: flex;
+    column-gap: 16px;
+    margin-top: 16px;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.social-item:hover {
+    opacity: 0.9;
 }
