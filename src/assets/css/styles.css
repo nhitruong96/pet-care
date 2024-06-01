@@ -904,11 +904,12 @@ button {
 .pricing__switch-label::before {
     position: absolute;
     content: "";
-    top: 0;
+    top: -1px;
     left: 0;
     width: 145px;
     height: 100%;
     background: #ff5b2e;
+    border: 1px solid #ff5b2e99;
     border-radius: inherit;
     transition: ease 0.25s;
 }
@@ -1057,6 +1058,7 @@ button {
     color: #fff;
     background: #ff5b2e;
     border-color: #ff5b2e;
+    box-shadow: 0px 15px 28px -7px rgba(255, 91, 46, 0.3);
 }
 
 .review__control:nth-of-type(2) {
@@ -1254,7 +1256,7 @@ button {
 /* Footer */
 .footer {
     margin-top: 53px;
-    background: #fff6ed;
+    background: linear-gradient(to right, #fff6ed 43%, transparent 43%);
 }
 
 .footer__inner {
@@ -1262,6 +1264,7 @@ button {
 }
 
 .footer__left {
+    width: 42%;
     padding: 114px 0 148px;
 }
 
@@ -1285,6 +1288,7 @@ button {
     border: none;
     outline: none;
     border-radius: inherit;
+    font-size: 1.4rem;
 }
 
 .subscribe-form__input::placeholder {
@@ -1305,6 +1309,7 @@ button {
     margin-right: -1px;
     border-radius: 50%;
     background: #ff5b2e;
+    box-shadow: 0px 15px 28px -7px rgba(255, 91, 46, 0.3);
     border: none;
     outline: none;
     cursor: pointer;
@@ -1339,4 +1344,39 @@ button {
 
 .social-item:hover {
     opacity: 0.9;
+}
+
+.footer__right {
+    flex: 1;
+    padding: 52px 0 48px 0;
+}
+
+.footer__row {
+    margin-left: 129px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 58px 137px;
+}
+
+.footer__list {
+    margin-top: 14px;
+}
+
+.footer__link,
+.footer__text {
+    font-size: 1.4rem;
+    line-height: 2;
+    color: #656689;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.footer__copyright {
+    margin: 52px 0 0 22px;
+    font-size: 1.2rem;
+    line-height: 1.17;
+    color: #656689;
+    opacity: 0.5;
 }
