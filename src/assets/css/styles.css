@@ -6,6 +6,11 @@
     --primary-color: #ff5b2e;
 }
 
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -114,13 +119,18 @@ button {
 
 /* Header */
 .header {
-    padding: 26px 0;
+    background-color: #fffaf5;
+    padding-top: 18px;
+    position: sticky;
+    top: -18px;
+    z-index: 2;
 }
 
 .header__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 8px 0;
 }
 
 .logo {
@@ -152,6 +162,11 @@ button {
 
 .navbar__link:hover,
 .header-action__link:hover {
+    text-shadow: 1px 0 0 currentColor;
+    color: #000958;
+}
+
+.navbar__link--active {
     text-shadow: 1px 0 0 currentColor;
     color: #000958;
 }
