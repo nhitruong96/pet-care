@@ -41,25 +41,41 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="./assets/css/styles.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
-        <!-- Header -->
+        <!-- PC header -->
         <header class="header">
             <div class="container">
                 <div class="header__inner">
+                    <!-- Tablet/mobile menu -->
+                    <label for="menu-checkbox" class="toggle-menu">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                        >
+                            <path
+                                fill="currentColor"
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                            />
+                        </svg>
+                    </label>
+
                     <!-- Logo -->
-                    <div class="logo">
-                        <img
-                            src="./assets/img/logo.svg"
-                            alt="Pet care"
-                            class="logo__img"
-                        />
-                        <span class="logo__brand">Petcare</span>
-                    </div>
+                    <a href="#">
+                        <div class="logo">
+                            <img
+                                src="./assets/img/logo.svg"
+                                alt="Pet care"
+                                class="logo__img"
+                            />
+                            <span class="logo__brand">Petcare</span>
+                        </div>
+                    </a>
 
                     <!-- Navbar -->
                     <nav class="navbar">
-                        <ul class="navbar__list">
+                        <ul id="pc-nav" class="navbar__list">
                             <li class="navbar__item">
                                 <a
                                     href="#!"
@@ -86,6 +102,12 @@
                                     Contact us
                                 </a>
                             </li>
+                            <li class="show-on-mobile separate">
+                                <a href="#!" class="navbar__link">Sign in</a>
+                            </li>
+                            <li class="show-on-mobile">
+                                <a href="#!" class="navbar__link">Sign up</a>
+                            </li>
                         </ul>
                     </nav>
 
@@ -95,6 +117,38 @@
                         <a href="#!" class="btn header-action__btn">Sign up</a>
                     </div>
                 </div>
+            </div>
+        </header>
+
+        <!-- Tablet/mobile header -->
+        <header class="mobile-header">
+            <input
+                type="checkbox"
+                name=""
+                id="menu-checkbox"
+                class="menu-checkbox"
+                hidden
+            />
+
+            <!-- Overlay -->
+            <label for="menu-checkbox" class="menu-overlay"></label>
+
+            <!-- Menu content -->
+            <div class="menu-drawer">
+                <!-- Logo -->
+                <a href="#">
+                    <div class="logo">
+                        <img
+                            src="./assets/img/logo.svg"
+                            alt="Pet care"
+                            class="logo__img"
+                        />
+                        <span class="logo__brand">Petcare</span>
+                    </div>
+                </a>
+
+                <!-- Navigation -->
+                <ul id="mobile-nav"></ul>
             </div>
         </header>
 
@@ -1266,5 +1320,13 @@
                 </div>
             </div>
         </footer>
+
+        <script>
+            const pcNav = document.querySelector("#pc-nav");
+            const mobileNav = document.querySelector("#mobile-nav");
+
+            // Copy from PC nav -> Mobile nav
+            mobileNav.innerHTML = pcNav.innerHTML;
+        </script>
     </body>
 </html>
