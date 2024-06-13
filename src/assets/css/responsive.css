@@ -290,6 +290,14 @@
         row-gap: 30px;
     }
 
+    .pricing-item {
+        text-align: center;
+    }
+
+    .pricing-item__list {
+        display: inline-table;
+    }
+
     .review__inner {
         column-gap: 10px;
     }
