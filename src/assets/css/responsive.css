@@ -310,9 +310,8 @@
         display: none;
     }
 
-    .review__control {
-        width: 32px;
-        height: 32px;
+    .review-item__content h2 {
+        font-size: 4.9rem;
     }
 
     .blog__list {
