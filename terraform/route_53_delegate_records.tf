@@ -10,11 +10,15 @@ provider "aws" {
   secret_key = try(data.vault_generic_secret.aws_delegation_creds.data["secret_key"], null)
 }
 
-
+# 2026-08-21: moved onto the levantine.io umbrella -- nhitruong.com is no
+# longer owned/renewed (confirmed: no such zone exists in this AWS
+# account). This now matches what's actually live (VIRTUAL_HOST in the
+# ansible repo's group_vars/VMWareDockerHosts) and the pattern already
+# used by thisper/processMining.
 resource "aws_route53_record" "configure_delegate_record" {
   provider = aws.delegate
-  zone_id = var.nhitruong_com_hosted_zone_id
-  name    = "pet-care.nhitruong.com"
+  zone_id = var.levantine_io_hosted_zone_id
+  name    = "pet-care.levantine.io"
   type    = "A"
   ttl     = 300
   records = [data.aws_instance.bastion_instance.public_ip]
